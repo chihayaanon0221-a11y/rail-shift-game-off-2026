@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e5e9ff">
+  <title>Rail Shift</title>
+  <link rel="stylesheet" href="rail.css">
+  <script defer src="rail.js"></script>
+</head>
+<body>
+  <main class="station">
+    <header class="masthead">
+      <h1>Rail Shift<span aria-hidden="true">↔</span></h1>
+      <p>Restore the signal pattern by moving adjacent tracks in opposite directions.</p>
+    </header>
+    <section class="yard" aria-label="Rail puzzle">
+      <div class="track-area">
+        <div class="toolbar">
+          <div>
+            <span id="level-count"></span>
+            <h2 id="level-name"></h2>
+          </div>
+          <p class="moves"><strong id="moves">0</strong> <span id="move-label">moves</span> <small id="par"></small></p>
+        </div>
+        <div id="board" class="board" aria-label="Current tracks"></div>
+        <p class="mobile-guide">The pale symbols show the target positions.</p>
+        <div class="controls" aria-label="Puzzle controls">
+          <button id="undo" type="button">Undo</button>
+          <button id="reset" type="button">Reset</button>
+          <button id="hint" type="button">Hint</button>
+          <button id="advance" type="button" hidden>Next puzzle</button>
+        </div>
+        <p id="notice" aria-live="polite">Choose an arrow between two tracks.</p>
+        <p class="keyboard"><kbd>↑</kbd><kbd>↓</kbd> Choose a pair <kbd>←</kbd><kbd>→</kbd> Shift <kbd>Z</kbd> Undo</p>
+      </div>
+      <aside class="reference">
+        <h2>Target pattern</h2>
+        <div id="target" class="board target" aria-label="Target tracks"></div>
+        <nav aria-label="Choose a puzzle" id="levels"></nav>
+      </aside>
+    </section>
+    <footer>Made for GitHub Game Off 2026</footer>
+  </main>
+</body>
+</html>
